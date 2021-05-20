@@ -11,6 +11,6 @@ python-3.8-venv
 ```
 
 ### requirement
-These packages should be installed in Rez production env:
+These (pip) packages should be installed in Rez production env:
 * [pythonfinder](https://github.com/sarugaku/pythonfinder)
 * [virtualenv](https://github.com/pypa/virtualenv)
