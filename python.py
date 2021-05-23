@@ -1,5 +1,3 @@
-from pythonfinder import Finder
-
 
 name = "python"
 
@@ -7,11 +5,15 @@ description = "Python interpreter provided from virtual env"
 
 uuid = "python.virtualenv"
 
-versions = [
-    # e.g. "2.7-venv"
-    py.py_version.name + "-venv"
-    for py in Finder().find_all_python_versions()
-]
+
+@early()
+def versions():
+    from pythonfinder import Finder
+    return [
+        # e.g. "2.7-venv"
+        py.py_version.name + "-venv"
+        for py in Finder().find_all_python_versions()
+    ]
 
 
 def commands():
